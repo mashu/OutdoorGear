@@ -140,7 +140,6 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       brand,
-    },
-    revalidate: 86400, // Revalidate every 24 hours
+    }
   };
 }
