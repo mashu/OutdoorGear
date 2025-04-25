@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaDiscord } from 'react-icons/fa';
 import categories from '../data/categories';
 
 export default function Footer() {
@@ -19,11 +19,8 @@ export default function Footer() {
                 className="text-gray-300 hover:text-white transition-colors">
                 <FaGithub size={24} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <FaTwitter size={24} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <FaInstagram size={24} />
+              <a href="https://discord.gg/XCPDm85tx7" className="text-gray-300 hover:text-white transition-colors">
+                <FaDiscord size={24} />
               </a>
             </div>
           </div>
@@ -58,6 +55,12 @@ export default function Footer() {
                 <a href="https://github.com/yourusername/outdoor-brands-website" 
                   className="text-gray-300 hover:text-white transition-colors">
                   GitHub Repository
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.gg/XCPDm85tx7" 
+                  className="text-gray-300 hover:text-white transition-colors">
+                  Friendly Outdoor Community Discord
                 </a>
               </li>
             </ul>

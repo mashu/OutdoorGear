@@ -5,9 +5,15 @@ import categories from '../data/categories';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleCategoryMenu = (e) => {
+    e.preventDefault();
+    setIsCategoryMenuOpen(!isCategoryMenuOpen);
   };
 
   return (
@@ -30,21 +36,26 @@ export default function Header() {
           <nav className="hidden md:flex space-x-6">
             <Link href="/" className="hover:text-green-200 transition-colors">Home
             </Link>
-            <div className="relative group">
-              <button className="flex items-center hover:text-green-200 transition-colors">
+            <div className="relative">
+              <button 
+                onClick={toggleCategoryMenu}
+                className="flex items-center hover:text-green-200 transition-colors"
+              >
                 Categories <FaList className="ml-1" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
-                {categories.map(category => (
-		<Link 
-		  key={category.id} 
-		  href={`/categories/${category.id}`}
-		  className="block px-4 py-2 text-gray-800 hover:bg-green-100"
-		>
-		  {category.name}
-		</Link>
-                ))}
-              </div>
+              {isCategoryMenuOpen && (
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                  {categories.map(category => (
+                    <Link 
+                      key={category.id} 
+                      href={`/categories/${category.id}`}
+                      className="block px-4 py-2 text-gray-800 hover:bg-green-100"
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
             <Link href="/brands" className="hover:text-green-200 transition-colors">All Brands
             </Link>
@@ -58,18 +69,25 @@ export default function Header() {
                 Home
             </Link>
             <div className="py-2">
-              <div className="font-medium mb-1">Categories</div>
-              <div className="pl-4 space-y-1">
-                {categories.map(category => (
-		<Link 
-		  key={category.id} 
-		  href={`/categories/${category.id}`}
-		  className="block py-1 hover:text-green-200 transition-colors"
-		>
-		  {category.name}
-		</Link>
-                ))}
+              <div 
+                className="font-medium mb-1 flex items-center cursor-pointer"
+                onClick={toggleCategoryMenu}
+              >
+                Categories <FaList className="ml-1" />
               </div>
+              {isCategoryMenuOpen && (
+                <div className="pl-4 space-y-1">
+                  {categories.map(category => (
+                    <Link 
+                      key={category.id} 
+                      href={`/categories/${category.id}`}
+                      className="block py-1 hover:text-green-200 transition-colors"
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
             <Link href="/brands" className="block py-2 hover:text-green-200 transition-colors">
                 All Brands
