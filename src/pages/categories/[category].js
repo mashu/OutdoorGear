@@ -37,10 +37,8 @@ export default function CategoryDetail({ category }) {
           <div className="text-center">
             <h1 className="text-3xl font-bold mb-4">Category Not Found</h1>
             <p className="mb-6">Sorry, the category you are looking for does not exist.</p>
-            <Link href="/">
-              <a className="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
-                <FaArrowLeft className="mr-2" /> Return Home
-              </a>
+            <Link href="/" className="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+              <FaArrowLeft className="mr-2" /> Return Home
             </Link>
           </div>
         </div>
@@ -94,10 +92,8 @@ export default function CategoryDetail({ category }) {
       </Head>
 
       <div className="container mx-auto px-4 py-8">
-        <Link href="/">
-          <a className="inline-flex items-center text-green-600 hover:text-green-700 mb-4">
-            <FaArrowLeft className="mr-2" /> Back to all categories
-          </a>
+        <Link href="/" className="inline-flex items-center text-green-600 hover:text-green-700 mb-4">
+          <FaArrowLeft className="mr-2" /> Back to all categories
         </Link>
         
         <h1 className="text-3xl font-bold mb-6">{category.name} Brands</h1>
