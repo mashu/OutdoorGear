@@ -39,7 +39,7 @@ export default function BrandDetail({ brand }) {
   return (
     <Layout>
       <Head>
-        <title>{brand.name} | European & Polish Outdoor Gear Brands</title>
+        <title>{brand.name} | European Outdoor Gear Brands</title>
         <meta name="description" content={brand.description} />
       </Head>
 

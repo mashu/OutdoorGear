@@ -87,8 +87,8 @@ export default function CategoryDetail({ category }) {
   return (
     <Layout>
       <Head>
-        <title>{category.name} | European & Polish Outdoor Gear Brands</title>
-        <meta name="description" content={`Browse European and Polish outdoor brands selling ${category.name.toLowerCase()} products`} />
+        <title>{category.name} | European Outdoor Gear Brands</title>
+        <meta name="description" content={`Browse European outdoor brands selling ${category.name.toLowerCase()} products`} />
       </Head>
 
       <div className="container mx-auto px-4 py-8">

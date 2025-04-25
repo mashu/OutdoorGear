@@ -44,8 +44,8 @@ export default function BrandsIndex() {
   return (
     <Layout>
       <Head>
-        <title>All Brands | European & Polish Outdoor Gear Brands</title>
-        <meta name="description" content="Browse all European and Polish outdoor gear brands for camping, hiking and outdoor activities" />
+        <title>All Brands | European Outdoor Gear Brands</title>
+        <meta name="description" content="Browse all European outdoor gear brands for camping, hiking and outdoor activities" />
       </Head>
 
       <div className="container mx-auto px-4 py-8">

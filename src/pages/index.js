@@ -90,8 +90,8 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>European & Polish Outdoor Gear Brands</title>
-        <meta name="description" content="Discover European and Polish outdoor gear brands for camping, hiking and outdoor activities" />
+        <title>European Outdoor Gear Brands</title>
+        <meta name="description" content="Discover European outdoor gear brands for camping, hiking and outdoor activities" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

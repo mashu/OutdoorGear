@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">OutdoorGearEU</h3>
             <p className="text-gray-300 mb-4">
-              Discover European and Polish outdoor gear brands for your next adventure.
+              Discover European outdoor gear brands for your next adventure.
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com/yourusername/outdoor-brands-website" 
