@@ -52,7 +52,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://github.com/yourusername/outdoor-brands-website" 
+                <a href="https://github.com/mashu/OutdoorGear" 
                   className="text-gray-300 hover:text-white transition-colors">
                   GitHub Repository
                 </a>
