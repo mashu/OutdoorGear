@@ -80,15 +80,15 @@ const brands = [
     featured: false
   },
   {
-    id: 'terg',
-    name: 'TERG',
-    country: 'Poland',
-    website: 'https://terg.pl',
-    logo: '/images/brands/terg.png',
-    description: 'Polish backpack manufacturer known for urban and hiking backpacks.',
-    categories: ['backpacks'],
-    subcategories: ['daypack', 'multiday'],
-    featured: false
+    id: 'hilleberg',
+    name: 'Hilleberg',
+    country: 'Sweden',
+    website: 'https://hilleberg.com',
+    logo: '/images/brands/hilleberg.png',
+    description: 'Swedish tent manufacturer renowned for high-quality, durable all-season tents.',
+    categories: ['shelter'],
+    subcategories: ['tents'],
+    featured: true
   }
 ];
 
