@@ -89,6 +89,17 @@ const brands = [
     categories: ['shelter'],
     subcategories: ['tents'],
     featured: true
+  },
+  {
+    id: 'nortent',
+    name: 'Nortent',
+    country: 'Norway',
+    website: 'https://nortent.com',
+    logo: '/images/brands/nortent.png',
+    description: 'Norwegian manufacturer of high-quality tents designed for Scandinavian conditions.',
+    categories: ['shelter'],
+    subcategories: ['tents'],
+    featured: false
   }
 ];
 
