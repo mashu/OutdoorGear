@@ -15,7 +15,7 @@ export default function Footer() {
               Discover European outdoor gear brands for your next adventure.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/yourusername/outdoor-brands-website" 
+              <a href="https://github.com/mashu/OutdoorGear" 
                 className="text-gray-300 hover:text-white transition-colors">
                 <FaGithub size={24} />
               </a>
