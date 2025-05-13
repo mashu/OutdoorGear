@@ -22,8 +22,8 @@ const brands = [
     website: 'https://alpkit.com',
     logo: '/images/brands/alpkit.png',
     description: 'UK-based manufacturer of outdoor gear specializing in lightweight equipment for activities like climbing, hiking, and camping.',
-    categories: ['shelter', 'sleep', 'stoves', 'clothes'],
-    subcategories: ['tents', 'tarps', 'bags', 'mats', 'gas', 'tops', 'bottoms'],
+    categories: ['shelter', 'sleep', 'stoves', 'clothes', 'ultralight'],
+    subcategories: ['tents', 'tarps', 'bags', 'mats', 'gas', 'tops', 'bottoms', 'ul-shelter', 'ul-sleep', 'ul-accessories'],
     featured: true
   },
   {
@@ -33,8 +33,8 @@ const brands = [
     website: 'https://atompacks.co.uk',
     logo: '/images/brands/atompacks.png',
     description: 'UK-based manufacturer specializing in lightweight, custom ultralight backpacks, including their versatile Prospector collection designed for hiking and backpacking.',
-    categories: ['backpacks'],
-    subcategories: ['daypack', 'multiday'],
+    categories: ['backpacks', 'ultralight'],
+    subcategories: ['daypack', 'multiday', 'ul-packs'],
     featured: true
   },
   {
@@ -55,8 +55,8 @@ const brands = [
     website: 'https://www.terra-nova.co.uk',
     logo: '/images/brands/teranova.png',
     description: 'British manufacturer of lightweight tents and expedition equipment, holding multiple Guinness World Records for the lightest tents.',
-    categories: ['shelter', 'sleep'],
-    subcategories: ['tents', 'bags'],
+    categories: ['shelter', 'sleep', 'ultralight'],
+    subcategories: ['tents', 'bags', 'ul-shelter'],
     featured: false
   },
   {
@@ -99,8 +99,8 @@ const brands = [
     website: 'https://theomm.com',
     logo: '/images/brands/omm.png',
     description: 'Original Mountain Marathon brand creating ultralight equipment and packs for mountain runners and fastpacking enthusiasts.',
-    categories: ['backpacks'],
-    subcategories: ['daypack', 'multiday'],
+    categories: ['backpacks', 'ultralight'],
+    subcategories: ['daypack', 'multiday', 'ul-packs', 'ul-accessories'],
     featured: false
   },
   {
@@ -110,8 +110,8 @@ const brands = [
     website: 'https://cumulus.equipment',
     logo: '/images/brands/cumulus.png',
     description: 'Polish manufacturer of high-quality down sleeping bags, jackets, and quilts.',
-    categories: ['sleep', 'clothes'],
-    subcategories: ['bags', 'quilts', 'outerwear'],
+    categories: ['sleep', 'clothes', 'ultralight'],
+    subcategories: ['bags', 'quilts', 'outerwear', 'down-products', 'ul-sleep'],
     featured: true
   },
   {
@@ -231,8 +231,8 @@ const brands = [
     website: 'https://rab.equipment',
     logo: '/images/brands/rab.png',
     description: 'UK brand specializing in technical mountaineering clothing and sleeping bags, renowned for high-performance insulation and weather protection.',
-    categories: ['clothes', 'sleep'],
-    subcategories: ['outerwear', 'bags'],
+    categories: ['clothes', 'sleep', 'ultralight'],
+    subcategories: ['outerwear', 'bags', 'down-products', 'ul-sleep'],
     featured: true
   },
   {
@@ -242,8 +242,8 @@ const brands = [
     website: 'https://www.montane.com',
     logo: '/images/brands/montane.png',
     description: 'British manufacturer of lightweight, breathable clothing and equipment designed for extreme environments and mountain sports.',
-    categories: ['clothes'],
-    subcategories: ['tops', 'bottoms', 'outerwear'],
+    categories: ['clothes', 'ultralight'],
+    subcategories: ['tops', 'bottoms', 'outerwear', 'ul-accessories'],
     featured: false
   },
   {
@@ -253,8 +253,8 @@ const brands = [
     website: 'https://www.mountain-equipment.co.uk',
     logo: '/images/brands/mountainequipment.png',
     description: 'British company developing high-performance clothing and equipment for mountaineering, climbing and winter sports.',
-    categories: ['clothes', 'sleep'],
-    subcategories: ['outerwear', 'bags'],
+    categories: ['clothes', 'sleep', 'ultralight'],
+    subcategories: ['outerwear', 'bags', 'down-products', 'ul-sleep'],
     featured: false
   },
   {
@@ -473,8 +473,8 @@ const brands = [
     website: 'https://www.carinthia.eu',
     logo: '/images/brands/carinthia.png',
     description: 'Austrian manufacturer specializing in high-performance sleeping bags and insulated clothing using advanced synthetic materials for extreme conditions.',
-    categories: ['sleep', 'clothes'],
-    subcategories: ['bags', 'outerwear'],
+    categories: ['sleep', 'clothes', 'ultralight'],
+    subcategories: ['bags', 'outerwear', 'ul-sleep'],
     featured: false
   },
   {
@@ -605,8 +605,8 @@ const brands = [
     website: 'https://lesovik.pl',
     logo: '/images/brands/lesovik.png',
     description: 'Polish manufacturer specializing in hammocks and lightweight camping gear.',
-    categories: ['shelter'],
-    subcategories: ['hammocks', 'tarps'],
+    categories: ['shelter', 'ultralight'],
+    subcategories: ['hammocks', 'tarps', 'ul-shelter'],
     featured: true
   },
   {
@@ -627,8 +627,8 @@ const brands = [
     website: 'https://nordisk.eu',
     logo: '/images/brands/nordisk.png',
     description: 'Danish outdoor equipment manufacturer focused on lightweight tents, sleeping bags, and clothing.',
-    categories: ['shelter', 'sleep', 'clothes'],
-    subcategories: ['tents', 'bags', 'outerwear'],
+    categories: ['shelter', 'sleep', 'clothes', 'ultralight'],
+    subcategories: ['tents', 'bags', 'outerwear', 'ul-shelter', 'ul-sleep'],
     featured: false
   },
   {
@@ -638,8 +638,8 @@ const brands = [
     website: 'https://hilleberg.com',
     logo: '/images/brands/hilleberg.png',
     description: 'Swedish tent manufacturer renowned for high-quality, durable all-season tents.',
-    categories: ['shelter'],
-    subcategories: ['tents'],
+    categories: ['shelter', 'ultralight'],
+    subcategories: ['tents', 'ul-shelter'],
     featured: true
   },
   {
@@ -671,8 +671,8 @@ const brands = [
     website: 'https://www.norrona.com',
     logo: '/images/brands/norrona.png',
     description: 'Norwegian high-end outdoor brand known for durable and functional clothing and equipment for hiking, skiing, and other outdoor activities.',
-    categories: ['backpacks', 'clothes'],
-    subcategories: ['daypack', 'multiday', 'tops', 'bottoms', 'outerwear'],
+    categories: ['backpacks', 'clothes', 'ultralight'],
+    subcategories: ['daypack', 'multiday', 'tops', 'bottoms', 'outerwear', 'down-products'],
     featured: false
   },
   {
@@ -682,8 +682,8 @@ const brands = [
     website: 'https://www.helsport.com',
     logo: '/images/brands/helsport.png',
     description: 'Norwegian manufacturer of high-quality tents, sleeping bags, and outdoor equipment designed for harsh Nordic conditions.',
-    categories: ['shelter', 'sleep'],
-    subcategories: ['tents', 'bags'],
+    categories: ['shelter', 'sleep', 'ultralight'],
+    subcategories: ['tents', 'bags', 'down-products', 'ul-shelter', 'ul-sleep'],
     featured: false
   },
   {
@@ -704,8 +704,8 @@ const brands = [
     website: 'https://www.exped.com',
     logo: '/images/brands/exped.png',
     description: 'Swiss company focusing on high-quality sleeping mats, backpacks, and tents with innovative designs for outdoor adventures.',
-    categories: ['backpacks', 'sleep', 'shelter'],
-    subcategories: ['daypack', 'multiday', 'mats', 'bags', 'tents'],
+    categories: ['backpacks', 'sleep', 'shelter', 'ultralight'],
+    subcategories: ['daypack', 'multiday', 'mats', 'bags', 'tents', 'ul-sleep', 'ul-shelter'],
     featured: false
   },
   {
@@ -814,8 +814,8 @@ const brands = [
     website: 'https://www.ddhammocks.com',
     logo: '/images/brands/ddhammocks.png',
     description: 'UK-based company specializing in lightweight hammocks, tarps, and camping equipment for bushcraft and outdoor enthusiasts.',
-    categories: ['shelter', 'sleep'],
-    subcategories: ['hammocks', 'tarps', 'bags'],
+    categories: ['shelter', 'sleep', 'ultralight'],
+    subcategories: ['hammocks', 'tarps', 'bags', 'ul-shelter'],
     featured: false
   },
   {
