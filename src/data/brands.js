@@ -839,7 +839,29 @@ const brands = [
     categories: ['shelter', 'sleep', 'clothes', 'backpacks'],
     subcategories: ['tents', 'bags', 'mats', 'outerwear', 'daypack'],
     featured: false
-  }
+  },
+{
+  id: 'bonfus',
+  name: 'Bonfus UL',
+  country: 'Italy',
+  website: 'https://www.bonfus.com',
+  logo: '/images/brands/bonfus.png',
+  description: 'Italian manufacturer specializing in ultralight backpacking equipment including custom shelters, packs, and premium down products for lightweight hiking and thru-hiking.',
+  categories: ['shelter', 'backpacks', 'sleep', 'ultralight'],
+  subcategories: ['tents', 'multiday', 'quilts', 'bags', 'ul-shelter', 'ul-packs', 'down-products', 'ul-sleep'],
+  featured: true
+},
+{
+  id: 'liteway',
+  name: 'Liteway',
+  country: 'Italy',
+  website: 'https://liteway.equipment',
+  logo: '/images/brands/liteway.png',
+  description: 'European ultralight hiking gear manufacturer producing lightweight shelters, packs and accessories with minimalist design for hikers and backpackers.',
+  categories: ['shelter', 'backpacks', 'ultralight'],
+  subcategories: ['tents', 'tarps', 'multiday', 'ul-shelter', 'ul-packs', 'ul-accessories'],
+  featured: false
+}
 ];
 
 export default brands;

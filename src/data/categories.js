@@ -81,6 +81,18 @@ const categories = [
       { id: 'hydration', name: 'Hydration' }
     ],
     icon: 'FaHiking'
+  },
+  {
+    id: 'ultralight',
+    name: 'Ultralight',
+    subcategories: [
+      { id: 'ul-shelter', name: 'Ultralight Shelters' },
+      { id: 'ul-packs', name: 'Ultralight Packs' },
+      { id: 'down-products', name: 'Down Products' },
+      { id: 'ul-sleep', name: 'Ultralight Sleep Systems' },
+      { id: 'ul-accessories', name: 'Ultralight Accessories' }
+    ],
+    icon: 'FaFeather'
   }
 ];
 
