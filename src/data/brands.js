@@ -100,6 +100,149 @@ const brands = [
     categories: ['shelter'],
     subcategories: ['tents'],
     featured: false
+  },
+  {
+    id: 'haglofs',
+    name: 'Haglöfs',
+    country: 'Sweden',
+    website: 'https://www.haglofs.com',
+    logo: '/images/brands/haglofs.png',
+    description: 'Swedish outdoor equipment supplier specializing in technical clothing, footwear, and hardware for outdoor enthusiasts.',
+    categories: ['backpacks', 'clothes'],
+    subcategories: ['daypack', 'multiday', 'tops', 'bottoms', 'outerwear', 'footwear'],
+    featured: false
+  },
+  {
+    id: 'norrona',
+    name: 'Norrøna',
+    country: 'Norway',
+    website: 'https://www.norrona.com',
+    logo: '/images/brands/norrona.png',
+    description: 'Norwegian high-end outdoor brand known for durable and functional clothing and equipment for hiking, skiing, and other outdoor activities.',
+    categories: ['backpacks', 'clothes'],
+    subcategories: ['daypack', 'multiday', 'tops', 'bottoms', 'outerwear'],
+    featured: false
+  },
+  {
+    id: 'helsport',
+    name: 'Helsport',
+    country: 'Norway',
+    website: 'https://www.helsport.com',
+    logo: '/images/brands/helsport.png',
+    description: 'Norwegian manufacturer of high-quality tents, sleeping bags, and outdoor equipment designed for harsh Nordic conditions.',
+    categories: ['shelter', 'sleep'],
+    subcategories: ['tents', 'bags'],
+    featured: false
+  },
+  {
+    id: 'bergans',
+    name: 'Bergans',
+    country: 'Norway',
+    website: 'https://www.bergans.com',
+    logo: '/images/brands/bergans.png',
+    description: 'Norwegian outdoor brand producing backpacks, tents, and technical clothing known for durability and functionality.',
+    categories: ['backpacks', 'shelter', 'clothes'],
+    subcategories: ['daypack', 'multiday', 'tents', 'tops', 'bottoms', 'outerwear'],
+    featured: false
+  },
+  {
+    id: 'exped',
+    name: 'Exped',
+    country: 'Switzerland',
+    website: 'https://www.exped.com',
+    logo: '/images/brands/exped.png',
+    description: 'Swiss company focusing on high-quality sleeping mats, backpacks, and tents with innovative designs for outdoor adventures.',
+    categories: ['backpacks', 'sleep', 'shelter'],
+    subcategories: ['daypack', 'multiday', 'mats', 'bags', 'tents'],
+    featured: false
+  },
+  {
+    id: 'optimus',
+    name: 'Optimus',
+    country: 'Sweden',
+    website: 'https://www.optimusstoves.com',
+    logo: '/images/brands/optimus.png',
+    description: 'Swedish manufacturer of outdoor cooking equipment, specializing in camping stoves and related accessories since 1899.',
+    categories: ['stoves'],
+    subcategories: ['gas', 'liquid'],
+    featured: false
+  },
+  {
+    id: 'mora',
+    name: 'Morakniv',
+    country: 'Sweden',
+    website: 'https://morakniv.se',
+    logo: '/images/brands/mora.png',
+    description: 'Swedish knife manufacturer producing high-quality and affordable outdoor knives trusted by craftsmen and outdoor enthusiasts worldwide.',
+    categories: ['knives'],
+    subcategories: ['knives'],
+    featured: false
+  },
+  {
+    id: 'fallkniven',
+    name: 'Fällkniven',
+    country: 'Sweden',
+    website: 'https://fallkniven.se',
+    logo: '/images/brands/fallkniven.png',
+    description: 'Swedish knife manufacturer specializing in high-end, premium quality survival and outdoor knives.',
+    categories: ['knives'],
+    subcategories: ['knives'],
+    featured: false
+  },
+  {
+    id: 'gransfors',
+    name: 'Gränsfors Bruk',
+    country: 'Sweden',
+    website: 'https://www.gransforsbruk.com',
+    logo: '/images/brands/gransfors.png',
+    description: 'Swedish axe manufacturer crafting premium hand-forged axes for forestry, woodworking, and outdoor activities.',
+    categories: ['knives'],
+    subcategories: ['axes'],
+    featured: false
+  },
+  {
+    id: 'trangia',
+    name: 'Trangia',
+    country: 'Sweden',
+    website: 'https://trangia.se',
+    logo: '/images/brands/trangia.png',
+    description: 'Swedish manufacturer of alcohol stove systems and outdoor cookware, known for their reliable and versatile cooking solutions.',
+    categories: ['stoves'],
+    subcategories: ['liquid'],
+    featured: false
+  },
+  {
+    id: 'hellyhansen',
+    name: 'Helly Hansen',
+    country: 'Norway',
+    website: 'https://www.hellyhansen.com',
+    logo: '/images/brands/hellyhansen.png',
+    description: 'Norwegian manufacturer of technical sailing and skiing outerwear and clothing, popular for both professional and casual outdoor use.',
+    categories: ['clothes'],
+    subcategories: ['tops', 'bottoms', 'outerwear'],
+    featured: true
+  },
+  {
+    id: 'silva',
+    name: 'Silva',
+    country: 'Sweden',
+    website: 'https://silva.se',
+    logo: '/images/brands/silva.png',
+    description: 'Swedish manufacturer of compasses, headlamps, and other navigation equipment essential for outdoor exploration.',
+    categories: ['lighting', 'trekking'],
+    subcategories: ['headlamps', 'navigation'],
+    featured: false
+  },
+  {
+    id: 'leki',
+    name: 'Leki',
+    country: 'Germany',
+    website: 'https://www.leki.com',
+    logo: '/images/brands/leki.png',
+    description: 'German manufacturer specializing in high-quality trekking poles, ski poles, and gloves for outdoor activities.',
+    categories: ['trekking'],
+    subcategories: ['poles'],
+    featured: false
   }
 ];
 

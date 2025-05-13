@@ -51,6 +51,36 @@ const categories = [
       { id: 'footwear', name: 'Footwear' }
     ],
     icon: 'FaTshirt'
+  },
+  {
+    id: 'knives',
+    name: 'Knives & Tools',
+    subcategories: [
+      { id: 'knives', name: 'Knives' },
+      { id: 'axes', name: 'Axes' },
+      { id: 'multitools', name: 'Multi-tools' }
+    ],
+    icon: 'FaCut'
+  },
+  {
+    id: 'lighting',
+    name: 'Lighting',
+    subcategories: [
+      { id: 'headlamps', name: 'Headlamps' },
+      { id: 'lanterns', name: 'Lanterns' },
+      { id: 'flashlights', name: 'Flashlights' }
+    ],
+    icon: 'FaLightbulb'
+  },
+  {
+    id: 'trekking',
+    name: 'Trekking Equipment',
+    subcategories: [
+      { id: 'poles', name: 'Trekking Poles' },
+      { id: 'navigation', name: 'Navigation' },
+      { id: 'hydration', name: 'Hydration' }
+    ],
+    icon: 'FaHiking'
   }
 ];
 
