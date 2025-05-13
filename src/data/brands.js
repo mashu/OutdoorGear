@@ -840,28 +840,39 @@ const brands = [
     subcategories: ['tents', 'bags', 'mats', 'outerwear', 'daypack'],
     featured: false
   },
-{
-  id: 'bonfus',
-  name: 'Bonfus UL',
-  country: 'Italy',
-  website: 'https://www.bonfus.com',
-  logo: '/images/brands/bonfus.png',
-  description: 'Italian manufacturer specializing in ultralight backpacking equipment including custom shelters, packs, and premium down products for lightweight hiking and thru-hiking.',
-  categories: ['shelter', 'backpacks', 'sleep', 'ultralight'],
-  subcategories: ['tents', 'multiday', 'quilts', 'bags', 'ul-shelter', 'ul-packs', 'down-products', 'ul-sleep'],
-  featured: true
-},
-{
-  id: 'liteway',
-  name: 'Liteway',
-  country: 'Italy',
-  website: 'https://liteway.equipment',
-  logo: '/images/brands/liteway.png',
-  description: 'European ultralight hiking gear manufacturer producing lightweight shelters, packs and accessories with minimalist design for hikers and backpackers.',
-  categories: ['shelter', 'backpacks', 'ultralight'],
-  subcategories: ['tents', 'tarps', 'multiday', 'ul-shelter', 'ul-packs', 'ul-accessories'],
-  featured: false
-}
+  {
+    id: 'bonfus',
+    name: 'Bonfus UL',
+    country: 'Italy',
+    website: 'https://www.bonfus.com',
+    logo: '/images/brands/bonfus.png',
+    description: 'Italian manufacturer specializing in ultralight backpacking equipment including custom shelters, packs, and premium down products for lightweight hiking and thru-hiking.',
+    categories: ['shelter', 'backpacks', 'sleep', 'ultralight'],
+    subcategories: ['tents', 'multiday', 'quilts', 'bags', 'ul-shelter', 'ul-packs', 'down-products', 'ul-sleep'],
+    featured: true
+  },
+  {
+    id: 'liteway',
+    name: 'Liteway',
+    country: 'Italy',
+    website: 'https://liteway.equipment',
+    logo: '/images/brands/liteway.png',
+    description: 'European ultralight hiking gear manufacturer producing lightweight shelters, packs and accessories with minimalist design for hikers and backpackers.',
+    categories: ['shelter', 'backpacks', 'ultralight'],
+    subcategories: ['tents', 'tarps', 'multiday', 'ul-shelter', 'ul-packs', 'ul-accessories'],
+    featured: false
+  },
+  {
+    id: 'dmmwales',
+    name: 'DMM Wales',
+    country: 'United Kingdom',
+    website: 'https://dmmwales.com',
+    logo: '/images/brands/dmmwales.png',
+    description: 'UK-based manufacturer of high-quality climbing equipment including carabiners, protection gear, and other hardware for climbers and mountaineers.',
+    categories: ['trekking'],
+    subcategories: ['navigation'],
+    featured: false
+  }
 ];
 
 export default brands;
