@@ -1,6 +1,8 @@
 /**
  * Sample brands data for European and Polish outdoor gear companies
  */
+import { calculateSimilarity } from '../utils/searchUtils';
+
 const brands = [
   {
     id: 'fjallraven',
@@ -805,39 +807,39 @@ const brands = [
     subcategories: ['poles'],
     featured: false
   },
-	{
-  id: 'ddhammocks',
-  name: 'DD Hammocks',
-  country: 'United Kingdom',
-  website: 'https://www.ddhammocks.com',
-  logo: '/images/brands/ddhammocks.png',
-  description: 'UK-based company specializing in lightweight hammocks, tarps, and camping equipment for bushcraft and outdoor enthusiasts.',
-  categories: ['shelter', 'sleep'],
-  subcategories: ['hammocks', 'tarps', 'bags'],
-  featured: false
-},
-{
-  id: 'vango',
-  name: 'Vango',
-  country: 'United Kingdom',
-  website: 'https://www.vango.co.uk',
-  logo: '/images/brands/vango.png',
-  description: 'Scottish outdoor equipment manufacturer known for their tents, sleeping bags, and camping accessories with innovative designs for all conditions.',
-  categories: ['shelter', 'sleep', 'backpacks'],
-  subcategories: ['tents', 'bags', 'mats', 'daypack'],
-  featured: false
-},
-{
-  id: 'oex',
-  name: 'OEX',
-  country: 'United Kingdom',
-  website: 'https://www.gooutdoors.co.uk/brands/oex',
-  logo: '/images/brands/oex.png',
-  description: 'GO Outdoors\' in-house budget brand offering value-focused camping and hiking equipment including tents, sleeping bags, and clothing.',
-  categories: ['shelter', 'sleep', 'clothes', 'backpacks'],
-  subcategories: ['tents', 'bags', 'mats', 'outerwear', 'daypack'],
-  featured: false
-}
+  {
+    id: 'ddhammocks',
+    name: 'DD Hammocks',
+    country: 'United Kingdom',
+    website: 'https://www.ddhammocks.com',
+    logo: '/images/brands/ddhammocks.png',
+    description: 'UK-based company specializing in lightweight hammocks, tarps, and camping equipment for bushcraft and outdoor enthusiasts.',
+    categories: ['shelter', 'sleep'],
+    subcategories: ['hammocks', 'tarps', 'bags'],
+    featured: false
+  },
+  {
+    id: 'vango',
+    name: 'Vango',
+    country: 'United Kingdom',
+    website: 'https://www.vango.co.uk',
+    logo: '/images/brands/vango.png',
+    description: 'Scottish outdoor equipment manufacturer known for their tents, sleeping bags, and camping accessories with innovative designs for all conditions.',
+    categories: ['shelter', 'sleep', 'backpacks'],
+    subcategories: ['tents', 'bags', 'mats', 'daypack'],
+    featured: false
+  },
+  {
+    id: 'oex',
+    name: 'OEX',
+    country: 'United Kingdom',
+    website: 'https://www.gooutdoors.co.uk/brands/oex',
+    logo: '/images/brands/oex.png',
+    description: 'GO Outdoors\' in-house budget brand offering value-focused camping and hiking equipment including tents, sleeping bags, and clothing.',
+    categories: ['shelter', 'sleep', 'clothes', 'backpacks'],
+    subcategories: ['tents', 'bags', 'mats', 'outerwear', 'daypack'],
+    featured: false
+  }
 ];
 
 export default brands;
@@ -874,15 +876,42 @@ export const filterBrands = (categoryId = null, subcategoryId = null) => {
 };
 
 /**
- * Search brands by name, description, or country
+ * Search brands by name, description, or country with similarity matching
  */
 export const searchBrands = (query) => {
   if (!query) return brands;
   
   const searchTerm = query.toLowerCase();
-  return brands.filter(brand => 
+  
+  // First do a simple includes check for exact matches
+  const exactMatches = brands.filter(brand => 
     brand.name.toLowerCase().includes(searchTerm) ||
     brand.description.toLowerCase().includes(searchTerm) ||
     brand.country.toLowerCase().includes(searchTerm)
   );
+  
+  // If we have exact matches, return them
+  if (exactMatches.length > 0) {
+    return exactMatches;
+  }
+  
+  // Otherwise, do a fuzzy search with similarity scoring
+  const SIMILARITY_THRESHOLD = 0.3; // Adjust as needed
+  
+  return brands.filter(brand => {
+    // Calculate similarity scores for name, description and country
+    const nameSimilarity = calculateSimilarity(brand.name, searchTerm);
+    const descriptionSimilarity = calculateSimilarity(brand.description, searchTerm);
+    const countrySimilarity = calculateSimilarity(brand.country, searchTerm);
+    
+    // Return brands with at least one field exceeding the threshold
+    return nameSimilarity > SIMILARITY_THRESHOLD || 
+           descriptionSimilarity > SIMILARITY_THRESHOLD || 
+           countrySimilarity > SIMILARITY_THRESHOLD;
+  }).sort((a, b) => {
+    // Sort by similarity to brand name
+    const aScore = calculateSimilarity(a.name, searchTerm);
+    const bScore = calculateSimilarity(b.name, searchTerm);
+    return bScore - aScore;
+  });
 };
