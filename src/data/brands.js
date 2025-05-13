@@ -36,6 +36,72 @@ const brands = [
     featured: true
   },
   {
+    id: 'berghaus',
+    name: 'Berghaus',
+    country: 'United Kingdom',
+    website: 'https://www.berghaus.com',
+    logo: '/images/brands/berghaus.png',
+    description: 'Pioneering British outdoor clothing and equipment brand with over 50 years of experience developing innovative gear for mountaineering and hiking.',
+    categories: ['clothes', 'backpacks'],
+    subcategories: ['outerwear', 'tops', 'bottoms', 'daypack', 'multiday'],
+    featured: true
+  },
+  {
+    id: 'teranova',
+    name: 'Terra Nova',
+    country: 'United Kingdom',
+    website: 'https://www.terra-nova.co.uk',
+    logo: '/images/brands/teranova.png',
+    description: 'British manufacturer of lightweight tents and expedition equipment, holding multiple Guinness World Records for the lightest tents.',
+    categories: ['shelter', 'sleep'],
+    subcategories: ['tents', 'bags'],
+    featured: false
+  },
+  {
+    id: 'craghoppers',
+    name: 'Craghoppers',
+    country: 'United Kingdom',
+    website: 'https://www.craghoppers.com',
+    logo: '/images/brands/craghoppers.png',
+    description: 'British brand specializing in travel and outdoor clothing with innovative technologies for insect protection and sun safety.',
+    categories: ['clothes'],
+    subcategories: ['tops', 'bottoms', 'outerwear'],
+    featured: false
+  },
+  {
+    id: 'snugpak',
+    name: 'Snugpak',
+    country: 'United Kingdom',
+    website: 'https://www.snugpak.com',
+    logo: '/images/brands/snugpak.png',
+    description: 'UK manufacturer of high-performance sleeping bags, insulated clothing and equipment for military and outdoor use.',
+    categories: ['sleep', 'clothes'],
+    subcategories: ['bags', 'outerwear'],
+    featured: false
+  },
+  {
+    id: 'buffalosystems',
+    name: 'Buffalo Systems',
+    country: 'United Kingdom',
+    website: 'https://www.buffalosystems.co.uk',
+    logo: '/images/brands/buffalosystems.png',
+    description: 'British maker of the revolutionary Pertex and pile clothing system, providing exceptional protection in extreme mountain conditions.',
+    categories: ['clothes'],
+    subcategories: ['outerwear'],
+    featured: false
+  },
+  {
+    id: 'omm',
+    name: 'OMM',
+    country: 'United Kingdom',
+    website: 'https://theomm.com',
+    logo: '/images/brands/omm.png',
+    description: 'Original Mountain Marathon brand creating ultralight equipment and packs for mountain runners and fastpacking enthusiasts.',
+    categories: ['backpacks'],
+    subcategories: ['daypack', 'multiday'],
+    featured: false
+  },
+  {
     id: 'cumulus',
     name: 'Cumulus',
     country: 'Poland',
@@ -77,6 +143,61 @@ const brands = [
     description: 'German outdoor clothing and equipment brand known for functional and durable products for hiking and everyday outdoor activities.',
     categories: ['clothes', 'backpacks'],
     subcategories: ['tops', 'bottoms', 'outerwear', 'daypack'],
+    featured: false
+  },
+  {
+    id: 'ortlieb',
+    name: 'Ortlieb',
+    country: 'Germany',
+    website: 'https://www.ortlieb.com',
+    logo: '/images/brands/ortlieb.png',
+    description: 'German brand specializing in waterproof bags, backpacks and bicycle panniers, renowned for their completely waterproof welded construction.',
+    categories: ['backpacks'],
+    subcategories: ['daypack', 'multiday'],
+    featured: true
+  },
+  {
+    id: 'edelrid',
+    name: 'Edelrid',
+    country: 'Germany',
+    website: 'https://www.edelrid.de',
+    logo: '/images/brands/edelrid.png',
+    description: 'German climbing equipment manufacturer with a focus on sustainable production of ropes, harnesses and mountaineering gear.',
+    categories: ['trekking'],
+    subcategories: ['navigation'],
+    featured: false
+  },
+  {
+    id: 'meindl',
+    name: 'Meindl',
+    country: 'Germany',
+    website: 'https://www.meindl.de',
+    logo: '/images/brands/meindl.png',
+    description: 'Traditional German bootmaker creating premium hiking and mountain boots with handcrafted quality and exceptional durability.',
+    categories: ['clothes'],
+    subcategories: ['footwear'],
+    featured: false
+  },
+  {
+    id: 'lowa',
+    name: 'Lowa',
+    country: 'Germany',
+    website: 'https://www.lowa.com',
+    logo: '/images/brands/lowa.png',
+    description: 'German manufacturer of high-quality outdoor boots with a century of expertise in creating performance footwear for hiking and mountaineering.',
+    categories: ['clothes'],
+    subcategories: ['footwear'],
+    featured: true
+  },
+  {
+    id: 'schoffel',
+    name: 'Schöffel',
+    country: 'Germany',
+    website: 'https://www.schoeffel.com',
+    logo: '/images/brands/schoffel.png',
+    description: 'Traditional German outdoor clothing brand specializing in technical apparel for hiking, skiing and outdoor activities.',
+    categories: ['clothes'],
+    subcategories: ['tops', 'bottoms', 'outerwear'],
     featured: false
   },
   {
@@ -157,6 +278,17 @@ const brands = [
     featured: false
   },
   {
+    id: 'salomon',
+    name: 'Salomon',
+    country: 'France',
+    website: 'https://www.salomon.com',
+    logo: '/images/brands/salomon.png',
+    description: 'French outdoor sports brand specializing in trail running footwear, hiking equipment and winter sports gear with innovative technologies.',
+    categories: ['clothes', 'backpacks'],
+    subcategories: ['footwear', 'daypack', 'outerwear'],
+    featured: true
+  },
+  {
     id: 'lasportiva',
     name: 'La Sportiva',
     country: 'Italy',
@@ -190,6 +322,72 @@ const brands = [
     featured: false
   },
   {
+    id: 'camp',
+    name: 'CAMP',
+    country: 'Italy',
+    website: 'https://www.camp.it',
+    logo: '/images/brands/camp.png',
+    description: 'Italian manufacturer of climbing and mountaineering equipment, producing lightweight technical hardware for alpinists and climbers since 1889.',
+    categories: ['trekking'],
+    subcategories: ['navigation'],
+    featured: false
+  },
+  {
+    id: 'grivel',
+    name: 'Grivel',
+    country: 'Italy',
+    website: 'https://www.grivel.com',
+    logo: '/images/brands/grivel.png',
+    description: 'Historic Italian brand producing ice axes, crampons and climbing equipment since 1818, with deep roots in alpine climbing history.',
+    categories: ['trekking'],
+    subcategories: ['navigation'],
+    featured: false
+  },
+  {
+    id: 'aku',
+    name: 'AKU',
+    country: 'Italy',
+    website: 'https://www.aku.it',
+    logo: '/images/brands/aku.png',
+    description: 'Italian footwear company specializing in handcrafted hiking and mountaineering boots with a focus on quality and sustainability.',
+    categories: ['clothes'],
+    subcategories: ['footwear'],
+    featured: false
+  },
+  {
+    id: 'zamberlan',
+    name: 'Zamberlan',
+    country: 'Italy',
+    website: 'https://www.zamberlan.com',
+    logo: '/images/brands/zamberlan.png',
+    description: 'Family-owned Italian bootmaker crafting premium hiking and mountaineering footwear with traditional craftsmanship since 1929.',
+    categories: ['clothes'],
+    subcategories: ['footwear'],
+    featured: false
+  },
+  {
+    id: 'boreal',
+    name: 'Boreal',
+    country: 'Spain',
+    website: 'https://www.borealoutdoor.com',
+    logo: '/images/brands/boreal.png',
+    description: 'Spanish pioneer in climbing shoe technology, creating performance footwear for rock climbing and mountaineering with innovative rubber compounds.',
+    categories: ['clothes'],
+    subcategories: ['footwear'],
+    featured: false
+  },
+  {
+    id: 'buff',
+    name: 'Buff',
+    country: 'Spain',
+    website: 'https://www.buff.com',
+    logo: '/images/brands/buff.png',
+    description: 'Spanish brand that invented the multifunctional tubular headwear, now producing a wide range of accessories for outdoor activities and sports.',
+    categories: ['clothes'],
+    subcategories: ['tops'],
+    featured: true
+  },
+  {
     id: 'petzl',
     name: 'Petzl',
     country: 'France',
@@ -209,6 +407,17 @@ const brands = [
     description: 'French brand developing technical mountaineering clothing and equipment since 1921, with expertise in alpine packs and performance apparel.',
     categories: ['clothes', 'backpacks'],
     subcategories: ['outerwear', 'multiday'],
+    featured: false
+  },
+  {
+    id: 'julbo',
+    name: 'Julbo',
+    country: 'France',
+    website: 'https://www.julbo.com',
+    logo: '/images/brands/julbo.png',
+    description: 'French eyewear specialist with over 130 years of experience designing high-performance sunglasses for mountaineering and outdoor sports.',
+    categories: ['trekking'],
+    subcategories: ['navigation'],
     featured: false
   },
   {
@@ -256,6 +465,17 @@ const brands = [
     featured: false
   },
   {
+    id: 'carinthia',
+    name: 'Carinthia',
+    country: 'Austria',
+    website: 'https://www.carinthia.eu',
+    logo: '/images/brands/carinthia.png',
+    description: 'Austrian manufacturer specializing in high-performance sleeping bags and insulated clothing using advanced synthetic materials for extreme conditions.',
+    categories: ['sleep', 'clothes'],
+    subcategories: ['bags', 'outerwear'],
+    featured: false
+  },
+  {
     id: 'dynafit',
     name: 'Dynafit',
     country: 'Austria',
@@ -289,6 +509,39 @@ const brands = [
     featured: false
   },
   {
+    id: 'icebug',
+    name: 'Icebug',
+    country: 'Sweden',
+    website: 'https://icebug.com',
+    logo: '/images/brands/icebug.png',
+    description: 'Swedish footwear brand pioneering traction technology with innovative grip solutions for trail running and winter conditions.',
+    categories: ['clothes'],
+    subcategories: ['footwear'],
+    featured: false
+  },
+  {
+    id: 'aclima',
+    name: 'Aclima',
+    country: 'Norway',
+    website: 'https://www.aclima.no',
+    logo: '/images/brands/aclima.png',
+    description: 'Norwegian manufacturer specialized in high-quality merino wool base layers and underwear for outdoor activities in all conditions.',
+    categories: ['clothes'],
+    subcategories: ['tops', 'bottoms'],
+    featured: false
+  },
+  {
+    id: 'daleofnorway',
+    name: 'Dale of Norway',
+    country: 'Norway',
+    website: 'https://www.daleofnorway.com',
+    logo: '/images/brands/daleofnorway.png',
+    description: 'Historic Norwegian brand crafting premium wool knitwear and sweaters combining traditional patterns with technical performance for outdoor use.',
+    categories: ['clothes'],
+    subcategories: ['tops'],
+    featured: false
+  },
+  {
     id: 'savotta',
     name: 'Savotta',
     country: 'Finland',
@@ -297,6 +550,17 @@ const brands = [
     description: 'Finnish manufacturer of military-grade backpacks, tents and shelters known for exceptional durability and functionality in extreme conditions.',
     categories: ['backpacks', 'shelter'],
     subcategories: ['multiday', 'tents'],
+    featured: false
+  },
+  {
+    id: 'sasta',
+    name: 'Sasta',
+    country: 'Finland',
+    website: 'https://www.sasta.fi',
+    logo: '/images/brands/sasta.png',
+    description: 'Finnish brand creating durable, functional outdoor and hunting clothing designed for the demanding Nordic wilderness conditions.',
+    categories: ['clothes'],
+    subcategories: ['tops', 'bottoms', 'outerwear'],
     featured: false
   },
   {
