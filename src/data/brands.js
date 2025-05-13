@@ -872,6 +872,61 @@ const brands = [
     categories: ['trekking'],
     subcategories: ['navigation'],
     featured: false
+  },
+    {
+    id: 'fjordnansen',
+    name: 'Fjord Nansen',
+    country: 'Poland',
+    website: 'https://shop.fjordnansen.com',
+    logo: '/images/brands/fjordnansen.png',
+    description: 'Polish outdoor equipment manufacturer producing tents, sleeping bags, backpacks, and other outdoor gear designed for various weather conditions and activities.',
+    categories: ['shelter', 'sleep', 'backpacks', 'trekking'],
+    subcategories: ['tents', 'bags', 'mats', 'daypack', 'multiday', 'poles', 'hydration'],
+    featured: false
+  },
+  {
+    id: 'milo',
+    name: 'Milo',
+    country: 'Poland',
+    website: 'https://milo.pl',
+    logo: '/images/brands/milo.png',
+    description: 'Polish manufacturer producing climbing and trekking garments since 1993, now selling products on four continents in over 40 countries.',
+    categories: ['clothes'],
+    subcategories: ['tops', 'bottoms', 'outerwear'],
+    featured: false
+  },
+  {
+    id: 'alpinus',
+    name: 'Alpinus',
+    country: 'Poland',
+    website: 'https://www.alpinus.eu/en',
+    logo: '/images/brands/alpinus.png',
+    description: 'Polish outdoor equipment manufacturer producing much of their PRO collection in Poland with a focus on quality outdoor equipment and apparel.',
+    categories: ['clothes', 'trekking', 'backpacks'],
+    subcategories: ['outerwear', 'tops', 'bottoms', 'poles', 'navigation', 'daypack'],
+    featured: false
+  },
+  {
+    id: 'helikon',
+    name: 'Helikon-Tex',
+    country: 'Poland',
+    website: 'https://helikon-tex.com/en',
+    logo: '/images/brands/helikon.png',
+    description: 'Polish tactical and outdoor equipment manufacturer producing high-quality clothing, backpacks, and accessories designed for military, law enforcement, and outdoor enthusiasts.',
+    categories: ['clothes', 'backpacks', 'trekking'],
+    subcategories: ['outerwear', 'tops', 'bottoms', 'daypack', 'multiday', 'navigation'],
+    featured: false
+  },
+  {
+    id: 'bushmen',
+    name: 'Bushmen',
+    country: 'Poland',
+    website: 'https://bushmen.pl',
+    logo: '/images/brands/bushmen.png',
+    description: 'Polish outdoor brand specializing in hammocks, tarps, and survival equipment for bushcraft and wilderness enthusiasts.',
+    categories: ['shelter', 'sleep', 'trekking'],
+    subcategories: ['hammocks', 'tarps', 'bags', 'navigation'],
+    featured: false
   }
 ];
 
