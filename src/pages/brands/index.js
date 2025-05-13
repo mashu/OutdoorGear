@@ -6,39 +6,53 @@ import { FaFilter } from 'react-icons/fa';
 import Layout from '../../components/Layout';
 import BrandCard from '../../components/BrandCard';
 import SearchBar from '../../components/SearchBar';
+import CountryFilter from '../../components/CountryFilter';
 
 import brands, { searchBrands } from '../../data/brands';
+import { getCountriesWithCounts } from '../../utils/filtering';
 
 export default function BrandsIndex() {
   const [filteredBrands, setFilteredBrands] = useState(brands);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const countries = getCountriesWithCounts(brands);
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    if (!query) {
-      setFilteredBrands(brands);
-      return;
-    }
-    setFilteredBrands(searchBrands(query));
+    applyFilters(query, selectedCountry);
   };
 
-  const resetSearch = () => {
+  const handleCountryChange = (country) => {
+    setSelectedCountry(country);
+    applyFilters(searchQuery, country);
+  };
+
+  const applyFilters = (query, country) => {
+    let results = brands;
+    
+    // Apply search filter if set
+    if (query) {
+      results = searchBrands(query);
+    }
+    
+    // Apply country filter if set
+    if (country) {
+      results = results.filter(brand => brand.country === country);
+    }
+    
+    setFilteredBrands(results);
+  };
+
+  const resetFilters = () => {
     setSearchQuery('');
+    setSelectedCountry(null);
     setFilteredBrands(brands);
   };
 
-  const countryList = [...new Set(brands.map(brand => brand.country))].sort();
-
-  const filterByCountry = (country) => {
-    if (!country) {
-      setFilteredBrands(searchQuery ? searchBrands(searchQuery) : brands);
-      return;
-    }
-    
-    const filtered = (searchQuery ? searchBrands(searchQuery) : brands)
-      .filter(brand => brand.country === country);
-    
-    setFilteredBrands(filtered);
+  const toggleFilters = () => {
+    setShowFilters(!showFilters);
   };
 
   return (
@@ -57,33 +71,45 @@ export default function BrandsIndex() {
           </div>
           
           <div className="flex items-center">
-            <div className="relative">
-              <label htmlFor="country-filter" className="mr-2 text-gray-700">
-                Filter by country:
-              </label>
-              <select
-                id="country-filter"
-                onChange={(e) => filterByCountry(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                <option value="">All Countries</option>
-                {countryList.map(country => (
-                  <option key={country} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <button 
+              onClick={toggleFilters}
+              className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg mr-4 hover:bg-blue-700"
+            >
+              <FaFilter className="mr-2" />
+              {showFilters ? 'Hide Filters' : 'Show Filters'}
+            </button>
             
-            {searchQuery && (
+            {(selectedCountry || searchQuery) && (
               <button 
-                onClick={resetSearch}
-                className="ml-4 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg"
+                onClick={resetFilters}
+                className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg"
               >
-                Reset Search
+                Reset Filters
               </button>
             )}
           </div>
+        </div>
+
+        {showFilters && (
+          <div className="mb-8 p-4 bg-gray-100 rounded-lg">
+            <CountryFilter
+              countries={countries}
+              selectedCountry={selectedCountry}
+              onCountryChange={handleCountryChange}
+            />
+          </div>
+        )}
+
+        <div className="mb-4 flex flex-wrap">
+          {selectedCountry && (
+            <span className="mr-2 mb-2 bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
+              Country: {selectedCountry}
+            </span>
+          )}
+        </div>
+
+        <div className="mb-4">
+          <p className="text-gray-600">Showing {filteredBrands.length} brands</p>
         </div>
 
         {filteredBrands.length > 0 ? (

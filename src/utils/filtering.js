@@ -88,6 +88,24 @@ export function groupBrandsByCountry(brands) {
 }
 
 /**
+ * Get unique list of countries from brands with counts
+ * @param {Array} brands - Array of brand objects
+ * @returns {Array} - Array of country objects with name and count
+ */
+export function getCountriesWithCounts(brands) {
+  const countryCounts = brands.reduce((acc, brand) => {
+    const country = brand.country;
+    acc[country] = (acc[country] || 0) + 1;
+    return acc;
+  }, {});
+  
+  return Object.entries(countryCounts).map(([name, count]) => ({
+    name,
+    count
+  }));
+}
+
+/**
  * Get unique list of countries from brands
  * @param {Array} brands - Array of brand objects
  * @returns {Array} - Array of unique country names
