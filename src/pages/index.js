@@ -149,36 +149,36 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Hero Section */}
+      {/* Compact Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
+        <div className="relative z-10 container mx-auto px-4 py-12 text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1 mb-4 backdrop-blur-sm text-sm">
               <FaCompass className="mr-2 text-yellow-300" />
               <span className="font-medium">Discover European Outdoor Excellence</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
               <span className="block">European</span>
               <span className="block bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent">
                 Outdoor Gear
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl mb-6 text-blue-100 max-w-2xl mx-auto leading-relaxed">
               Connect with premium outdoor equipment manufacturers from across Europe. 
               Quality gear for your next adventure awaits.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link href="/brands" className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold text-lg">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
+              <Link href="/brands" className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold">
                 <FaGlobe className="mr-2" />
                 Explore All Brands
                 <FaArrowRight className="ml-2" />
               </Link>
               
-              <div className="flex items-center text-white text-lg">
+              <div className="flex items-center text-white">
                 <FaStar className="text-yellow-300 mr-2" />
                 <span>{featuredBrands.length} Featured Brands</span>
               </div>
@@ -188,16 +188,16 @@ export default function Home() {
         
         {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-500"></div>
-        <div className="absolute top-20 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-10 right-10 w-24 h-24 bg-white bg-opacity-10 rounded-full animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-16 h-16 bg-white bg-opacity-10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-8">
         
         {/* Search and Filter Section */}
-        <div className="bg-white rounded-2xl shadow-elegant p-8 mb-12 border border-gray-100">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6 space-y-4 lg:space-y-0">
+        <div className="bg-white rounded-2xl shadow-elegant p-6 mb-8 border border-gray-100">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-4 space-y-4 lg:space-y-0">
             <div className="w-full lg:w-1/2">
               <SearchBar onSearch={handleSearch} initialValue={searchQuery} />
             </div>
@@ -230,8 +230,8 @@ export default function Home() {
           <div className={`transition-all duration-500 overflow-hidden ${
             showFilters ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <div className="border-t border-gray-200 pt-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="border-t border-gray-200 pt-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <CategoryFilter 
                   categories={categories}
                   selectedCategory={selectedCategory}
@@ -252,7 +252,7 @@ export default function Home() {
 
         {/* Active Filters Display */}
         {hasActiveFilters && (
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-6 animate-fade-in">
             <div className="flex flex-wrap gap-3">
               {selectedCategory && (
                 <span className="inline-flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium border border-green-200">
@@ -276,7 +276,7 @@ export default function Home() {
         )}
 
         {/* Results Counter */}
-        <div className="mb-8 flex justify-between items-center">
+        <div className="mb-6 flex justify-between items-center">
           <div>
             <p className="text-gray-600 text-lg">
               <span className="font-semibold text-gray-800">{filteredBrands.length}</span> brands found
@@ -293,7 +293,7 @@ export default function Home() {
 
         {/* Brands Grid */}
         {filteredBrands.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
             {filteredBrands.map(brand => (
               <BrandCard key={brand.id} brand={brand} />
             ))}
