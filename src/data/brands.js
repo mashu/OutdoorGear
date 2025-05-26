@@ -46,7 +46,7 @@ const brands = [
     description: 'Pioneering British outdoor clothing and equipment brand with over 50 years of experience developing innovative gear for mountaineering and hiking.',
     categories: ['clothes', 'backpacks'],
     subcategories: ['outerwear', 'tops', 'bottoms', 'daypack', 'multiday'],
-    featured: true
+    featured: false
   },
   {
     id: 'teranova',
@@ -123,7 +123,7 @@ const brands = [
     description: 'German backpack manufacturer with over 120 years of experience, known for innovative carrying systems and high-quality hiking, trekking and mountaineering packs.',
     categories: ['backpacks'],
     subcategories: ['daypack', 'multiday'],
-    featured: true
+    featured: false
   },
   {
     id: 'vaude',
@@ -156,7 +156,7 @@ const brands = [
     description: 'German brand specializing in waterproof bags, backpacks and bicycle panniers, renowned for their completely waterproof welded construction.',
     categories: ['backpacks'],
     subcategories: ['daypack', 'multiday'],
-    featured: true
+    featured: false
   },
   {
     id: 'edelrid',
@@ -189,7 +189,7 @@ const brands = [
     description: 'German manufacturer of high-quality outdoor boots with a century of expertise in creating performance footwear for hiking and mountaineering.',
     categories: ['clothes'],
     subcategories: ['footwear'],
-    featured: true
+    featured: false
   },
   {
     id: 'schoffel',
@@ -288,7 +288,7 @@ const brands = [
     description: 'French outdoor sports brand specializing in trail running footwear, hiking equipment and winter sports gear with innovative technologies.',
     categories: ['clothes', 'backpacks'],
     subcategories: ['footwear', 'daypack', 'outerwear'],
-    featured: true
+    featured: false
   },
   {
     id: 'lasportiva',
@@ -299,7 +299,7 @@ const brands = [
     description: 'Italian manufacturer producing high-performance footwear for climbing, hiking, mountaineering and trail running with innovative designs and materials.',
     categories: ['clothes'],
     subcategories: ['footwear'],
-    featured: true
+    featured: false
   },
   {
     id: 'scarpa',
@@ -387,7 +387,7 @@ const brands = [
     description: 'Spanish brand that invented the multifunctional tubular headwear, now producing a wide range of accessories for outdoor activities and sports.',
     categories: ['clothes'],
     subcategories: ['tops'],
-    featured: true
+    featured: false
   },
   {
     id: 'petzl',
@@ -398,7 +398,7 @@ const brands = [
     description: 'French company pioneering climbing equipment and headlamps with a focus on safety, innovation and quality for vertical sports and rescue operations.',
     categories: ['lighting', 'trekking'],
     subcategories: ['headlamps', 'navigation'],
-    featured: true
+    featured: false
   },
   {
     id: 'millet',
@@ -453,7 +453,7 @@ const brands = [
     description: 'Swiss premium mountaineering and outdoor brand with over 160 years of history, creating high-quality equipment, clothing and safety gear for alpine activities.',
     categories: ['clothes', 'backpacks', 'trekking'],
     subcategories: ['outerwear', 'multiday', 'navigation'],
-    featured: true
+    featured: false
   },
   {
     id: 'wenger',
@@ -508,7 +508,7 @@ const brands = [
     description: 'Traditional Swedish brand producing durable Nordic outdoor boots, clothing and equipment with timeless functionality for Nordic conditions.',
     categories: ['clothes'],
     subcategories: ['footwear', 'outerwear'],
-    featured: false
+    featured: true
   },
   {
     id: 'icebug',
@@ -596,7 +596,7 @@ const brands = [
     description: 'Danish manufacturer of camping equipment including tents, sleeping bags, and mattresses.',
     categories: ['shelter', 'sleep'],
     subcategories: ['tents', 'hammocks', 'bags', 'mats'],
-    featured: false
+    featured: true
   },
   {
     id: 'lesovik',
@@ -618,7 +618,7 @@ const brands = [
     description: 'Swedish manufacturer of camping stoves and cooking equipment.',
     categories: ['stoves'],
     subcategories: ['gas', 'liquid'],
-    featured: false
+    featured: true
   },
   {
     id: 'nordisk',
@@ -651,7 +651,7 @@ const brands = [
     description: 'Norwegian manufacturer of high-quality tents designed for Scandinavian conditions.',
     categories: ['shelter'],
     subcategories: ['tents'],
-    featured: false
+    featured: true
   },
   {
     id: 'haglofs',
@@ -662,7 +662,7 @@ const brands = [
     description: 'Swedish outdoor equipment supplier specializing in technical clothing, footwear, and hardware for outdoor enthusiasts.',
     categories: ['backpacks', 'clothes'],
     subcategories: ['daypack', 'multiday', 'tops', 'bottoms', 'outerwear', 'footwear'],
-    featured: false
+    featured: true
   },
   {
     id: 'norrona',
@@ -706,7 +706,7 @@ const brands = [
     description: 'Swiss company focusing on high-quality sleeping mats, backpacks, and tents with innovative designs for outdoor adventures.',
     categories: ['backpacks', 'sleep', 'shelter', 'ultralight'],
     subcategories: ['daypack', 'multiday', 'mats', 'bags', 'tents', 'ul-sleep', 'ul-shelter'],
-    featured: false
+    featured: true
   },
   {
     id: 'optimus',
@@ -717,7 +717,7 @@ const brands = [
     description: 'Swedish manufacturer of outdoor cooking equipment, specializing in camping stoves and related accessories since 1899.',
     categories: ['stoves'],
     subcategories: ['gas', 'liquid'],
-    featured: false
+    featured: true
   },
   {
     id: 'mora',
@@ -728,7 +728,7 @@ const brands = [
     description: 'Swedish knife manufacturer producing high-quality and affordable outdoor knives trusted by craftsmen and outdoor enthusiasts worldwide.',
     categories: ['knives'],
     subcategories: ['knives'],
-    featured: false
+    featured: true
   },
   {
     id: 'fallkniven',
@@ -761,7 +761,7 @@ const brands = [
     description: 'Swedish manufacturer of alcohol stove systems and outdoor cookware, known for their reliable and versatile cooking solutions.',
     categories: ['stoves'],
     subcategories: ['liquid'],
-    featured: false
+    featured: true
   },
   {
     id: 'hellyhansen',
@@ -772,7 +772,7 @@ const brands = [
     description: 'Norwegian manufacturer of technical sailing and skiing outerwear and clothing, popular for both professional and casual outdoor use.',
     categories: ['clothes'],
     subcategories: ['tops', 'bottoms', 'outerwear'],
-    featured: true
+    featured: false
   },
   {
     id: 'silva',
@@ -805,7 +805,7 @@ const brands = [
     description: 'German manufacturer specializing in high-quality trekking poles, ski poles, and gloves for outdoor activities.',
     categories: ['trekking'],
     subcategories: ['poles'],
-    featured: false
+    featured: true
   },
   {
     id: 'ddhammocks',
@@ -849,7 +849,7 @@ const brands = [
     description: 'Italian manufacturer specializing in ultralight backpacking equipment including custom shelters, packs, and premium down products for lightweight hiking and thru-hiking.',
     categories: ['shelter', 'backpacks', 'sleep', 'ultralight'],
     subcategories: ['tents', 'multiday', 'quilts', 'bags', 'ul-shelter', 'ul-packs', 'down-products', 'ul-sleep'],
-    featured: true
+    featured: false
   },
   {
     id: 'liteway',
