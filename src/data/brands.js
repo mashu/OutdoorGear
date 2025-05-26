@@ -398,7 +398,7 @@ const brands = [
     description: 'French company pioneering climbing equipment and headlamps with a focus on safety, innovation and quality for vertical sports and rescue operations.',
     categories: ['lighting', 'trekking'],
     subcategories: ['headlamps', 'navigation'],
-    featured: false
+    featured: true
   },
   {
     id: 'millet',
