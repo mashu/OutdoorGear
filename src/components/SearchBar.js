@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import brands from '../data/brands';
-import categories from '../data/categories';
 
 export default function SearchBar({ onSearch, initialValue = '' }) {
   const [searchTerm, setSearchTerm] = useState(initialValue);
@@ -22,9 +20,6 @@ export default function SearchBar({ onSearch, initialValue = '' }) {
     }
   };
 
-  // Get unique countries for datalist options
-  const uniqueCountries = [...new Set(brands.map(brand => brand.country))].sort();
-
   return (
     <form onSubmit={handleSubmit} className="w-full">
       <div className="relative">
@@ -34,7 +29,6 @@ export default function SearchBar({ onSearch, initialValue = '' }) {
           onChange={handleChange}
           placeholder="Search brands, categories, or countries..."
           className="w-full px-4 py-2 pl-10 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-          list="search-suggestions"
           autoComplete="off"
         />
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -46,33 +40,6 @@ export default function SearchBar({ onSearch, initialValue = '' }) {
         >
           Search
         </button>
-        
-        <datalist id="search-suggestions">
-          {/* Brand options */}
-          {brands.map(brand => (
-            <option key={`brand-${brand.id}`} value={brand.name} />
-          ))}
-          
-          {/* Country options */}
-          {uniqueCountries.map(country => (
-            <option key={`country-${country}`} value={country} />
-          ))}
-          
-          {/* Category options */}
-          {categories.map(category => (
-            <option key={`category-${category.id}`} value={category.name} />
-          ))}
-          
-          {/* Subcategory options */}
-          {categories.flatMap(category => 
-            category.subcategories.map(subcategory => (
-              <option 
-                key={`subcategory-${category.id}-${subcategory.id}`} 
-                value={subcategory.name} 
-              />
-            ))
-          )}
-        </datalist>
       </div>
     </form>
   );
